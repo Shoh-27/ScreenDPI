@@ -1,6 +1,6 @@
 {
     "name": "my-worker",
     "compatibility_date": "2026-02-03",
-    "main": "index.js"
+    "main": "script.js"
   }
   
