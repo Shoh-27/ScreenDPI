@@ -1,6 +1,9 @@
 {
-    "name": "my-worker",
+    "name": "screendpi",
     "compatibility_date": "2026-02-03",
-    "main": "script.js"
+    "assets": {
+      "directory": "."
+    }
   }
+  
   
