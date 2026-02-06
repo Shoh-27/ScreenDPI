@@ -3,22 +3,30 @@
 
   <url>
     <loc>https://screendpi.pages.dev/</loc>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
     <loc>https://screendpi.pages.dev/about</loc>
-    <priority>0.5</priority>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 
-    <url>
+  <url>
     <loc>https://screendpi.pages.dev/contact</loc>
-    <priority>0.3</priority>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.4</priority>
   </url>
 
   <url>
     <loc>https://screendpi.pages.dev/privacy</loc>
-    <priority>0.1</priority>
+    <lastmod>2026-02-06</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.2</priority>
   </url>
 
 </urlset>
