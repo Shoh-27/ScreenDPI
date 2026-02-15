@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Frequently asked questions about screen DPI, PPI, monitor calibration, and display measurements. Get expert answers to common questions.">
+  <title>FAQ — Screen DPI Calculator Frequently Asked Questions</title>
+  <link rel="canonical" href="https://screendpichecker.com/faq.html">
+  <link rel="stylesheet" href="styles.css">
+
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [{
+        "@type": "Question",
+        "name": "What is the difference between DPI and PPI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "DPI (Dots Per Inch) technically refers to printer resolution, while PPI (Pixels Per Inch) is the correct term for screens. However, they are often used interchangeably. For digital displays, PPI measures how many pixels fit into one linear inch of screen space."
+        }
+      },{
+        "@type": "Question",
+        "name": "How do I calculate my screen's DPI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Use our free calculator with credit card calibration for the most accurate results. The formula is: DPI = diagonal resolution in pixels / diagonal size in inches. Diagonal resolution is calculated as √(width² + height²)."
+        }
+      },{
+        "@type": "Question",
+        "name": "Why does my operating system show 96 DPI?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "96 DPI is a logical reference value used by Windows, not your actual physical pixel density. Operating systems use scaling factors rather than reporting true DPI for compatibility with older software."
+        }
+      },{
+        "@type": "Question",
+        "name": "What is a good DPI for gaming?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "For gaming, 100-150 DPI is ideal. Higher DPI requires more GPU power without visual benefit in games. Most gamers prefer 24-27 inch monitors at 1080p or 1440p resolution."
+        }
+      },{
+        "@type": "Question",
+        "name": "How accurate is credit card calibration?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Very accurate when done carefully. Credit cards follow ISO/IEC 7810 ID-1 standard (85.60 × 53.98 mm). This method can achieve accuracy within 1-2 DPI of your actual screen density."
+        }
+      }]
+    }
+  </script>
+</head>
+<body>
+<nav class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / FAQ
+  </div>
+</nav>
+<header>
+  <div class="container">
+    <h1>Frequently Asked Questions</h1>
+    <p class="subtitle">Expert answers to common questions about screen DPI and pixel density</p>
+  </div>
+</header>
+<main class="container">
+  <section class="content-section faq-section">
+    <h2>General Questions</h2>
+
+    <div class="faq-item">
+      <h3>What is the difference between DPI and PPI?</h3>
+      <p><strong>DPI (Dots Per Inch)</strong> technically refers to printer resolution — how many ink dots a printer can place in one linear inch. <strong>PPI (Pixels Per Inch)</strong> is the correct term for screens, measuring how many pixels fit into one inch of display.</p>
+      <p>In practice, people use DPI and PPI interchangeably when discussing screens. This tool measures PPI, but we use "DPI" because it's the more commonly searched term.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do I calculate my screen's DPI?</h3>
+      <p>You can calculate DPI using this formula:</p>
+      <p><strong>DPI = √(width² + height²) / diagonal_inches</strong></p>
+      <p>For example, a 27-inch monitor with 2560×1440 resolution:</p>
+      <ol>
+        <li>Calculate diagonal pixels: √(2560² + 1440²) = 2937 pixels</li>
+        <li>Divide by diagonal size: 2937 / 27 = 109 DPI</li>
+      </ol>
+      <p>Easier method: Use our <a href="/">DPI Calculator</a> with credit card calibration.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why does my operating system show 96 DPI when my screen is different?</h3>
+      <p>96 DPI (Windows) and 72 DPI (older Mac) are <strong>logical reference values</strong>, not physical measurements. These are historical standards that operating systems use for compatibility.</p>
+      <p>Modern OS use scaling factors instead. A 220 PPI Retina display might report as "96 DPI at 2x scaling" — meaning each CSS pixel uses 2×2 physical pixels. See our <a href="/guides/72-vs-96-dpi.html">72 vs 96 DPI guide</a> for the full history.</p>
+    </div>
+
+    <h2>About the Tool</h2>
+
+    <div class="faq-item">
+      <h3>How accurate is the credit card calibration method?</h3>
+      <p>Credit card calibration is very accurate when done carefully. Credit cards worldwide follow the ISO/IEC 7810 ID-1 standard with exact dimensions of 85.60mm × 53.98mm.</p>
+      <p>If you precisely match the on-screen rectangle to your physical card, this method achieves accuracy within 1-2 DPI. Make sure your browser zoom is at 100% (press Ctrl+0 or Cmd+0).</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Does this tool collect my data?</h3>
+      <p>No. All calculations happen entirely in your browser using JavaScript. We don't collect, store, or transmit any information about your screen measurements or device. See our <a href="/privacy.html">Privacy Policy</a> for details.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Can I use this on mobile devices?</h3>
+      <p>Yes, the tool works on smartphones and tablets. However, credit card calibration works best on desktop monitors where precise adjustments are easier. For mobile devices, use manual entry if you know your screen size.</p>
+    </div>
+
+    <h2>Display Technology</h2>
+
+    <div class="faq-item">
+      <h3>What is a good DPI for different uses?</h3>
+      <ul>
+        <li><strong>General use:</strong> 90-110 DPI (24" 1080p, 27" 1440p)</li>
+        <li><strong>Design work:</strong> 100-163 DPI (27" 4K ideal)</li>
+        <li><strong>Gaming:</strong> 100-140 DPI (less GPU strain)</li>
+        <li><strong>Text-heavy work:</strong> 150-220 DPI (Retina displays)</li>
+        <li><strong>Professional photo editing:</strong> 163-220 DPI</li>
+      </ul>
+    </div>
+
+    <div class="faq-item">
+      <h3>Is higher DPI always better?</h3>
+      <p>Not necessarily. Benefits of higher DPI:</p>
+      <ul>
+        <li>Sharper text and images</li>
+        <li>Smoother curves and diagonals</li>
+        <li>Better for detail work</li>
+      </ul>
+      <p>Drawbacks of very high DPI (220+):</p>
+      <ul>
+        <li>Requires more GPU power</li>
+        <li>UI elements become tiny without OS scaling</li>
+        <li>Higher cost</li>
+        <li>Reduced battery life on laptops</li>
+      </ul>
+      <p>The sweet spot for most desktop work is 100-163 DPI.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What is a Retina display?</h3>
+      <p>Retina is Apple's marketing term for screens with pixel density high enough that individual pixels are invisible at normal viewing distances. The threshold varies by device:</p>
+      <ul>
+        <li>iPhone: ~300 PPI (10-12 inch viewing distance)</li>
+        <li>iPad: ~220 PPI (15 inch viewing distance)</li>
+        <li>MacBook: ~200-220 PPI (20 inch viewing distance)</li>
+        <li>iMac: ~170-220 PPI (24-30 inch viewing distance)</li>
+      </ul>
+      <p>Learn more in our <a href="/guides/what-is-retina-display.html">Retina Display guide</a>.</p>
+    </div>
+
+    <h2>Screen Measurements</h2>
+
+    <div class="faq-item">
+      <h3>How do I measure my monitor's diagonal size manually?</h3>
+      <p>To measure manually:</p>
+      <ol>
+        <li>Use a measuring tape or ruler</li>
+        <li>Measure from one corner to the opposite corner</li>
+        <li>Measure only the visible screen area (exclude the bezel)</li>
+        <li>If measured in centimeters, divide by 2.54 to convert to inches</li>
+      </ol>
+      <p>See our <a href="/guides/how-to-measure-monitor-size.html">complete measurement guide</a>.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>What if browser zoom affects my calibration?</h3>
+      <p>Browser zoom will affect calibration accuracy. Always ensure your browser is at 100% zoom:</p>
+      <ul>
+        <li><strong>Windows/Linux:</strong> Press Ctrl+0</li>
+        <li><strong>Mac:</strong> Press Cmd+0</li>
+        <li>Check the browser's address bar for zoom indicator</li>
+      </ul>
+    </div>
+
+    <h2>Web Design & Development</h2>
+
+    <div class="faq-item">
+      <h3>Does DPI matter for web design?</h3>
+      <p>For most web development, <strong>no</strong>. Browsers use CSS pixels (logical units) that automatically adapt to different pixel densities. A 300px wide element looks the same size on any screen.</p>
+      <p>DPI matters for:</p>
+      <ul>
+        <li>Serving appropriate image resolutions (use srcset)</li>
+        <li>Canvas and WebGL applications</li>
+        <li>Building measurement tools or rulers</li>
+      </ul>
+      <p>Read our complete guide: <a href="/guides/does-dpi-matter-for-web.html">Does DPI Matter for Web Design?</a></p>
+    </div>
+
+    <div class="faq-item">
+      <h3>How do CSS pixels relate to physical measurements?</h3>
+      <p>CSS defines <strong>1 inch = 96 CSS pixels</strong>, regardless of your screen's actual DPI. This is a logical standard, not a physical measurement.</p>
+      <p>To convert:</p>
+      <ul>
+        <li>CSS pixels to inches: divide by 96</li>
+        <li>Inches to CSS pixels: multiply by 96</li>
+      </ul>
+      <p>See our <a href="/guides/css-px-to-inches.html">CSS Pixels to Inches guide</a>.</p>
+    </div>
+
+    <h2>Print vs Screen</h2>
+
+    <div class="faq-item">
+      <h3>What's the difference between 96 DPI (screen) and 300 DPI (print)?</h3>
+      <p>96 DPI is a logical reference for screens, while 300 DPI is the physical requirement for quality print output.</p>
+      <p>Key differences:</p>
+      <ul>
+        <li><strong>Screen (96 DPI):</strong> Logical standard; actual screen DPI varies widely</li>
+        <li><strong>Print (300 DPI):</strong> Physical requirement based on human vision limits</li>
+      </ul>
+      <p>When printing screen images, they become ~3x smaller at 300 DPI. A 1920×1080 image that fills your screen will print at only 6.4" × 3.6".</p>
+      <p>Full explanation: <a href="/guides/96-vs-300-dpi.html">96 DPI vs 300 DPI guide</a>.</p>
+    </div>
+
+    <h2>Troubleshooting</h2>
+
+    <div class="faq-item">
+      <h3>My results seem incorrect. What should I check?</h3>
+      <p>If measurements seem off, verify:</p>
+      <ol>
+        <li><strong>Browser zoom is at 100%</strong> (Ctrl+0 or Cmd+0)</li>
+        <li><strong>Credit card alignment is precise</strong> (use a physical card)</li>
+        <li><strong>Screen resolution is detected correctly</strong></li>
+        <li><strong>Diagonal size entry is accurate</strong> (for manual method)</li>
+      </ol>
+      <p>Try both calibration methods and compare results.</p>
+    </div>
+
+    <div class="faq-item">
+      <h3>Why does my second monitor show different DPI?</h3>
+      <p>Different monitors have different pixel densities. A 24" 1080p monitor (~92 DPI) and a 27" 4K monitor (~163 DPI) side-by-side will have very different PPI values.</p>
+      <p>This is normal. To measure each monitor, run the calculator on that specific screen.</p>
+    </div>
+
+    <h2>Still Have Questions?</h2>
+    <p>If your question wasn't answered here:</p>
+    <ul>
+      <li>Browse our <a href="/guides/">complete guide library</a></li>
+      <li>Check our <a href="/articles.html">articles and tutorials</a></li>
+      <li><a href="/contact.html">Contact us</a> directly</li>
+    </ul>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>About This Tool</h4>
+        <p>Screen DPI & Physical Size Checker is a free utility for designers, developers, and digital professionals.</p>
+        <p class="contact-email">Contact: <a href="mailto:support@screendpichecker.com">support@screendpichecker.com</a></p>
+      </div>
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/guides/">Guides</a></li>
+          <li><a href="/articles.html">Articles</a></li>
+          <li><a href="/faq.html">FAQ</a></li>
+          <li><a href="/about.html">About</a></li>
+          <li><a href="/privacy.html">Privacy Policy</a></li>
+          <li><a href="/contact.html">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h4>Information</h4>
+        <p>All measurements are calculated entirely in your browser. No data is collected or stored.</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Screen DPI Checker. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
