@@ -2,9 +2,241 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Learn the critical differences between 96 DPI screen resolution and 300 DPI print resolution. Understand when each matters and how to convert between them.">
+    <title>96 DPI vs 300 DPI: Screen vs Print Resolution Explained</title>
+    <link rel="canonical" href="https://screendpichecker.com/guides/96-vs-300-dpi.html">
+    <link rel="stylesheet" href="../styles.css">
 </head>
 <body>
+<nav class="breadcrumb">
+    <div class="container">
+        <a href="/">Home</a> / <a href="/guides/">Guides</a> / 96 vs 300 DPI
+    </div>
+</nav>
 
+<header>
+    <div class="container">
+        <h1>96 DPI vs 300 DPI: Screen vs Print Resolution</h1>
+        <p class="subtitle">Understanding the fundamental difference between screen and print resolution standards</p>
+    </div>
+</header>
+
+<main class="container">
+    <article class="content-section guide-article">
+        <h2>The Core Difference: Screen vs Print</h2>
+        <p>One of the most common confusions in digital design is the relationship between screen resolution (typically 96 DPI) and print resolution (typically 300 DPI). These numbers represent fundamentally different technologies, and understanding why they differ is crucial for anyone working across digital and print media.</p>
+
+        <h2>What 96 DPI Means for Screens</h2>
+        <p>When we talk about 96 DPI for screens, we're actually talking about a <strong>logical reference point</strong>, not a physical measurement. Modern screens vary widely in actual pixel density:</p>
+
+        <ul>
+            <li>Budget 24" monitor: ~92 PPI actual</li>
+            <li>MacBook Pro Retina: ~220 PPI actual</li>
+            <li>iPhone screen: ~460 PPI actual</li>
+            <li>4K TV at 10 feet: ~55 PPI actual</li>
+        </ul>
+
+        <p>The "96 DPI" standard is a Windows legacy that defines how CSS and applications interpret measurements. It doesn't describe your physical screen—use our <a href="/">DPI calculator</a> to measure your actual pixel density.</p>
+
+        <h2>What 300 DPI Means for Print</h2>
+        <p><strong>300 DPI (dots per inch) is the gold standard for professional print resolution</strong>, and unlike screen DPI, this is a physical requirement based on human vision.</p>
+
+        <h3>Why 300 DPI?</h3>
+        <p>The human eye can distinguish approximately 300 distinct dots per inch when viewing print material at typical reading distances (12-14 inches). Beyond 300 DPI, most people cannot perceive additional detail. This makes 300 DPI the sweet spot where:</p>
+        <ul>
+            <li>Print quality appears sharp and professional</li>
+            <li>No visible pixelation or dot patterns</li>
+            <li>File sizes remain manageable</li>
+            <li>Printing costs stay reasonable</li>
+        </ul>
+
+        <h3>Lower Print DPI Standards</h3>
+        <p>Not all printing requires 300 DPI:</p>
+        <ul>
+            <li><strong>150 DPI:</strong> Acceptable for large posters viewed from distance</li>
+            <li><strong>72-96 DPI:</strong> Billboard graphics (viewed from far away)</li>
+            <li><strong>200 DPI:</strong> Newspapers (newsprint can't hold finer detail)</li>
+            <li><strong>600-1200 DPI:</strong> High-end art books and fine art prints</li>
+        </ul>
+
+        <h2>Size Comparison: 96 DPI vs 300 DPI</h2>
+
+        <p>Here's what happens when you take a screen image and print it at 300 DPI:</p>
+
+        <table>
+            <thead>
+            <tr>
+                <th>Screen Dimension</th>
+                <th>At 96 DPI (screen)</th>
+                <th>At 300 DPI (print)</th>
+                <th>Difference</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>1920×1080 pixels</td>
+                <td>20" × 11.25"</td>
+                <td>6.4" × 3.6"</td>
+                <td>3.125x smaller</td>
+            </tr>
+            <tr>
+                <td>3840×2160 pixels (4K)</td>
+                <td>40" × 22.5"</td>
+                <td>12.8" × 7.2"</td>
+                <td>3.125x smaller</td>
+            </tr>
+            <tr>
+                <td>1080×1080 pixels (Instagram)</td>
+                <td>11.25" × 11.25"</td>
+                <td>3.6" × 3.6"</td>
+                <td>3.125x smaller</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <p><strong>Key insight:</strong> A 1920×1080 image that fills your screen will only print at 6.4" × 3.6" at 300 DPI. This is why screen graphics often can't be directly used for print.</p>
+
+        <h2>Converting Between Screen and Print</h2>
+
+        <h3>Formula: Pixels to Print Size</h3>
+        <p>To calculate how large an image will print at 300 DPI:</p>
+        <p><code>Print Width (inches) = Pixel Width ÷ 300<br>
+            Print Height (inches) = Pixel Height ÷ 300</code></p>
+
+        <p>Example: A 3000×2000 pixel image will print at 10" × 6.67" at 300 DPI.</p>
+
+        <h3>Formula: Required Pixels for Desired Print Size</h3>
+        <p>To determine how many pixels you need for a specific print size:</p>
+        <p><code>Required Pixels = Desired Size (inches) × 300 DPI</code></p>
+
+        <p>Example: An 8" × 10" print at 300 DPI requires 2400 × 3000 pixels.</p>
+
+        <h3>Upscaling Considerations</h3>
+        <p>When you try to print a low-resolution image at 300 DPI, three things can happen:</p>
+        <ol>
+            <li><strong>Reduce print size:</strong> Print smaller at 300 DPI (recommended)</li>
+            <li><strong>Lower DPI:</strong> Print larger at 150-200 DPI (visible quality loss)</li>
+            <li><strong>Upscale pixels:</strong> Use AI upscaling (results vary)</li>
+        </ol>
+
+        <p>Traditional upscaling (just increasing pixel count) creates blurry results. Modern AI upscaling tools like Topaz Gigapixel can help, but it's always better to start with sufficient resolution.</p>
+
+        <h2>Common Scenarios</h2>
+
+        <h3>Scenario 1: Website Screenshot for Print Brochure</h3>
+        <p><strong>Problem:</strong> Your client wants to print a website screenshot at 8" wide.</p>
+        <p><strong>Solution:</strong></p>
+        <ul>
+            <li>Required pixels: 8" × 300 DPI = 2400 pixels wide</li>
+            <li>If screenshot is only 1920px wide: Maximum 6.4" print width at 300 DPI</li>
+            <li>Options: Print smaller, use 200 DPI (acceptable for some brochures), or recreate graphics as vector</li>
+        </ul>
+
+        <h3>Scenario 2: Logo for Screen and Print</h3>
+        <p><strong>Problem:</strong> One logo file needs to work everywhere.</p>
+        <p><strong>Solution:</strong> Use vector formats (SVG, EPS, AI) which are resolution-independent. Vector logos scale perfectly to any size for both screen and print without quality loss.</p>
+
+        <h3>Scenario 3: Photo from Phone for Business Card</h3>
+        <p><strong>Problem:</strong> Using smartphone photo (12MP = 4000×3000px) for 2" × 1.5" business card image.</p>
+        <p><strong>Solution:</strong> You're fine! 12MP provides 4000px, enough for 13.3" at 300 DPI. A 2" wide print only needs 600 pixels.</p>
+
+        <h2>Why Can't Printers Match Screen Vibrancy?</h2>
+        <p>Even at 300 DPI, prints often look less vibrant than screens. This isn't about DPI—it's about color technology:</p>
+
+        <ul>
+            <li><strong>Screens emit light:</strong> RGB colors on backlit displays appear bright</li>
+            <li><strong>Prints reflect light:</strong> CMYK ink on paper absorbs wavelengths, appearing duller</li>
+            <li><strong>Color gamut differences:</strong> Screens (especially wide-gamut) show colors impossible to print</li>
+            <li><strong>Brightness:</strong> Paper's maximum brightness is white paper; screens can be much brighter</li>
+        </ul>
+
+        <p>This is why professional print work requires color calibration and proofing, regardless of DPI.</p>
+
+        <h2>Digital Publishing: When 96 DPI IS Enough</h2>
+        <p>For purely digital distribution, higher than screen resolution is wasted:</p>
+
+        <ul>
+            <li><strong>PDFs for screen viewing:</strong> 96-150 DPI is sufficient</li>
+            <li><strong>PowerPoint presentations:</strong> Match your projector (usually 1080p or 4K)</li>
+            <li><strong>eBooks and digital magazines:</strong> Optimize for typical tablet screens (~264 PPI)</li>
+            <li><strong>Web images:</strong> Use actual pixel dimensions, DPI is meaningless</li>
+        </ul>
+
+        <p>Exception: If the PDF might be printed later, use 300 DPI.</p>
+
+        <h2>Practical Workflow Tips</h2>
+
+        <h3>For Designers Creating Print Materials</h3>
+        <ol>
+            <li>Set up documents at 300 DPI from the start</li>
+            <li>Use vector graphics whenever possible (logos, icons, illustrations)</li>
+            <li>Source photos at minimum 300 DPI at final print size</li>
+            <li>Add 0.125" bleed for professional printing</li>
+            <li>Proof on calibrated monitors and request physical proofs</li>
+        </ol>
+
+        <h3>For Designers Creating Screen Graphics</h3>
+        <ol>
+            <li>Design at actual pixel dimensions (1920×1080, 1920×1200, etc.)</li>
+            <li>Provide @2x and @3x assets for high-DPI displays</li>
+            <li>Use SVG for icons and logos (infinitely scalable)</li>
+            <li>Ignore the DPI setting in Photoshop—it's irrelevant for screens</li>
+            <li>Optimize file size over resolution (for web performance)</li>
+        </ol>
+
+        <h3>For Hybrid Projects</h3>
+        <p>If you need one asset for both screen and print:</p>
+        <ol>
+            <li>Create at print resolution (300 DPI at largest intended print size)</li>
+            <li>Downscale for screen use (maintains quality)</li>
+            <li>Keep the high-res master file for future print needs</li>
+            <li>Use responsive images to serve appropriate versions</li>
+        </ol>
+
+        <h2>The Real DPI of Your Screen</h2>
+        <p>Neither 96 nor 300 DPI describes your actual monitor. To find your real pixel density, use our <a href="/">Screen DPI Calculator</a> with credit card calibration. Knowing your actual PPI helps you:</p>
+        <ul>
+            <li>Preview print materials at true size</li>
+            <li>Understand how designs scale across devices</li>
+            <li>Make informed decisions about monitor upgrades</li>
+        </ul>
+
+        <h2>Conclusion</h2>
+        <p>96 DPI and 300 DPI serve different purposes: 96 is a logical reference for screens (your actual screen DPI varies), while 300 is a physical requirement for quality print output. The key is knowing which standard applies to your project and planning accordingly. Always create print materials at 300 DPI, but don't waste bandwidth serving 300 DPI images for screen viewing.</p>
+
+        <div class="internal-links">
+            <h3>Related Guides</h3>
+            <ul>
+                <li><a href="/guides/72-vs-96-dpi.html">72 DPI vs 96 DPI Explained</a></li>
+                <li><a href="/guides/ppi-calculator-explained.html">How PPI Calculators Work</a></li>
+                <li><a href="/guides/does-dpi-matter-for-web.html">Does DPI Matter for Web Design?</a></li>
+                <li><a href="/">Calculate Your Screen's Real DPI</a></li>
+            </ul>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About This Tool</h4>
+                <p>Screen DPI & Physical Size Checker is a free utility for designers, developers, and digital professionals.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/guides/">Guides</a></li>
+                    <li><a href="/privacy.html">Privacy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Screen DPI Checker. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 </body>
 </html>
