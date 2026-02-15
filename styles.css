@@ -991,6 +991,202 @@ footer {
     }
 }
 
+/* Breadcrumb Navigation */
+.breadcrumb {
+    background: var(--bg-white);
+    border-bottom: 1px solid var(--border-color);
+    padding: 12px 0;
+    font-size: 0.875rem;
+}
+
+.breadcrumb a {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.breadcrumb a:hover {
+    text-decoration: underline;
+}
+
+/* Educational Content */
+.educational-content {
+    line-height: 1.8;
+}
+
+.educational-content h3 {
+    margin-top: 35px;
+}
+
+.dpi-reference-table {
+    width: 100%;
+    margin: 25px 0;
+}
+
+.dpi-reference-table th,
+.dpi-reference-table td {
+    text-align: left;
+    padding: 12px 15px;
+}
+
+.internal-links {
+    background: var(--bg-light);
+    border-left: 4px solid var(--primary-color);
+    padding: 25px;
+    margin-top: 40px;
+    border-radius: 6px;
+}
+
+.internal-links h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.internal-links ul {
+    margin-bottom: 0;
+}
+
+/* Guide Article */
+.guide-article {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.guide-article h2 {
+    margin-top: 40px;
+}
+
+.guide-article h2:first-of-type {
+    margin-top: 0;
+}
+
+.guide-article table {
+    margin: 25px 0;
+    font-size: 0.95rem;
+}
+
+.guide-article code {
+    background: var(--bg-light);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    font-size: 0.9em;
+}
+
+.guide-article ol,
+.guide-article ul {
+    margin: 20px 0;
+    padding-left: 30px;
+}
+
+.guide-article li {
+    margin-bottom: 10px;
+}
+
+/* Guide Grid */
+.guide-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 25px;
+    margin-top: 30px;
+}
+
+.guide-card {
+    background: var(--bg-light);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    padding: 25px;
+    transition: all 0.2s;
+}
+
+.guide-card:hover {
+    box-shadow: var(--card-shadow-hover);
+    border-color: var(--primary-color);
+}
+
+.guide-card h3 {
+    margin-top: 0;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+}
+
+.guide-card h3 a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.guide-card h3 a:hover {
+    color: var(--primary-color);
+}
+
+.guide-card p {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+.guide-meta {
+    display: inline-block;
+    font-size: 0.875rem;
+    color: var(--text-secondary);
+    padding: 4px 12px;
+    background: var(--bg-white);
+    border-radius: 4px;
+}
+
+/* FAQ Compact */
+.faq-compact {
+    margin-top: 25px;
+}
+
+.faq-compact-item {
+    margin-bottom: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.faq-compact-item:last-child {
+    border-bottom: none;
+}
+
+.faq-compact-item h3 {
+    font-size: 1.125rem;
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.faq-compact-item p {
+    margin-bottom: 0;
+}
+
+/* Resource List */
+.resource-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+}
+
+.resource-list li {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.resource-list li:last-child {
+    border-bottom: none;
+}
+
+.resource-list a {
+    font-weight: 500;
+}
+
+.cta-text {
+    font-size: 1.125rem;
+    text-align: center;
+    padding: 20px;
+    background: var(--bg-light);
+    border-radius: 6px;
+    margin: 20px 0;
+}
+
 /* Print Styles */
 @media print {
     .ad-placeholder,

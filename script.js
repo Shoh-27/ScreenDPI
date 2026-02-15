@@ -156,11 +156,11 @@
     function updateCreditCardSize() {
         const width = elements.cardSlider.value;
         elements.creditCard.style.width = width + 'px';
-        
+
         // Standard credit card aspect ratio (85.6mm / 53.98mm = 1.5857)
         const height = width / 1.5857;
         elements.creditCard.style.height = height + 'px';
-        
+
         elements.cardWidth.textContent = width + 'px';
     }
 
@@ -235,19 +235,19 @@
         // Update DOM
         elements.dpiValue.textContent = Math.round(calculatedDPI) + ' PPI';
         elements.densityClass.textContent = densityClassification;
-        
-        elements.physicalWidth.textContent = 
+
+        elements.physicalWidth.textContent =
             widthInches.toFixed(2) + '" (' + widthCM.toFixed(1) + ' cm)';
-        
-        elements.physicalHeight.textContent = 
+
+        elements.physicalHeight.textContent =
             heightInches.toFixed(2) + '" (' + heightCM.toFixed(1) + ' cm)';
-        
-        elements.diagonalSize.textContent = 
+
+        elements.diagonalSize.textContent =
             diagonalInches.toFixed(2) + '" (' + diagonalCM.toFixed(1) + ' cm)';
-        
+
         elements.aspectRatio.textContent = aspectRatio;
-        
-        elements.totalPixels.textContent = 
+
+        elements.totalPixels.textContent =
             (totalPixels / 1000000).toFixed(2) + ' megapixels';
 
         // Scroll to results
@@ -262,20 +262,20 @@
 
         // Check for common aspect ratios
         const ratio = width / height;
-        
+
         if (Math.abs(ratio - 16/9) < 0.01) return '16:9';
         if (Math.abs(ratio - 16/10) < 0.01) return '16:10';
         if (Math.abs(ratio - 4/3) < 0.01) return '4:3';
         if (Math.abs(ratio - 21/9) < 0.01) return '21:9';
         if (Math.abs(ratio - 32/9) < 0.01) return '32:9';
         if (Math.abs(ratio - 3/2) < 0.01) return '3:2';
-        
+
         // If no common ratio found, simplify the actual ratio
         if (ratioWidth > 100 || ratioHeight > 100) {
             // If ratio is too complex, show decimal
             return ratio.toFixed(2) + ':1';
         }
-        
+
         return Math.round(ratioWidth) + ':' + Math.round(ratioHeight);
     }
 

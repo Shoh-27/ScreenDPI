@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Convert CSS pixels to physical inches. Understand the relationship between CSS units, device pixels, and real-world measurements.">
+    <title>CSS Pixels to Inches: Understanding Web Measurements and Conversions</title>
+    <link rel="canonical" href="https://screendpichecker.com/guides/css-px-to-inches.html">
+    <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<nav class="breadcrumb">
+    <div class="container">
+        <a href="/">Home</a> / <a href="/guides/">Guides</a> / CSS Pixels to Inches
+    </div>
+</nav>
+<header>
+    <div class="container">
+        <h1>CSS Pixels to Inches</h1>
+        <p class="subtitle">Understanding the relationship between CSS units and physical measurements</p>
+    </div>
+</header>
+<main class="container">
+    <article class="content-section guide-article">
+        <h2>The CSS Pixel Definition</h2>
+        <p>According to the CSS specification, <strong>1 inch = 96 CSS pixels</strong>, regardless of your screen's actual DPI.</p>
+        <p>This means:</p>
+        <ul>
+            <li>96px = 1 CSS inch</li>
+            <li>1px = 1/96 of a CSS inch (0.0104 inches)</li>
+            <li>1cm = 96/2.54 = 37.8 CSS pixels</li>
+        </ul>
+
+        <h2>CSS Pixels vs Physical Pixels</h2>
+        <p>A CSS pixel is a <strong>logical unit</strong>, not a physical screen pixel. On high-DPI displays:</p>
+        <ul>
+            <li>1 CSS pixel = 1 physical pixel (standard displays)</li>
+            <li>1 CSS pixel = 4 physical pixels (2x Retina)</li>
+            <li>1 CSS pixel = 9 physical pixels (3x displays)</li>
+        </ul>
+
+        <h2>Conversion Formulas</h2>
+        <h3>CSS Pixels to Inches</h3>
+        <p><code>inches = css_pixels / 96</code></p>
+        <p>Example: 480px = 480/96 = 5 inches (CSS)</p>
+
+        <h3>Inches to CSS Pixels</h3>
+        <p><code>css_pixels = inches × 96</code></p>
+        <p>Example: 3 inches = 3 × 96 = 288px</p>
+
+        <h3>CSS Pixels to Physical Pixels</h3>
+        <p><code>physical_pixels = css_pixels × device_pixel_ratio</code></p>
+        <p>Example on 2x Retina: 100px CSS = 200 physical pixels</p>
+
+        <h2>Practical Examples</h2>
+        <table>
+            <thead>
+            <tr>
+                <th>CSS Pixels</th>
+                <th>CSS Inches</th>
+                <th>Actual Inches (96 PPI)</th>
+                <th>Actual Inches (220 PPI)</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>96px</td>
+                <td>1"</td>
+                <td>1"</td>
+                <td>0.44"</td>
+            </tr>
+            <tr>
+                <td>192px</td>
+                <td>2"</td>
+                <td>2"</td>
+                <td>0.87"</td>
+            </tr>
+            <tr>
+                <td>480px</td>
+                <td>5"</td>
+                <td>5"</td>
+                <td>2.18"</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <h2>Why This Matters</h2>
+        <p>Understanding CSS pixel conversion is important when:</p>
+        <ul>
+            <li>Building print stylesheets</li>
+            <li>Creating measurement tools or rulers</li>
+            <li>Converting design specs from print to web</li>
+            <li>Calculating physical UI element sizes</li>
+        </ul>
+
+        <p>For most web development, use CSS pixels and let the browser handle device-specific rendering.</p>
+
+        <div class="internal-links">
+            <h3>Related Guides</h3>
+            <ul>
+                <li><a href="/guides/does-dpi-matter-for-web.html">Does DPI Matter for Web</a></li>
+                <li><a href="/guides/72-vs-96-dpi.html">72 vs 96 DPI</a></li>
+                <li><a href="/">Calculate Real Screen DPI</a></li>
+            </ul>
+        </div>
+    </article>
+</main>
+<footer>
+    <div class="container">
+        <div class="footer-bottom">
+            <p>&copy; 2026 Screen DPI Checker.</p>
+        </div>
+    </div>
+</footer>
+</body>
+</html>

@@ -1,458 +1,583 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="What is my screen DPI? Use this free online tool to check your screen DPI, PPI, resolution, and physical size instantly.">
-    <meta name="keywords"
-        content="screen dpi checker, monitor dpi calculator, screen ppi, display dpi test, screen size checker, pixels per inch">
+    <meta name="description" content="Free screen DPI calculator with credit card calibration. Instantly measure your monitor's pixel density, physical size, and PPI. Perfect for designers and developers.">
+    <meta name="keywords" content="screen dpi checker, monitor dpi calculator, screen ppi, display dpi test, screen size checker, pixels per inch">
     <meta name="author" content="Screen DPI Checker">
-    <meta property="og:title" content="What Is My Screen DPI?" />
-    <meta property="og:description" content="Free online screen DPI and PPI checker." />
-    <meta property="og:type" content="website" />
+    <title>Screen DPI Calculator — Free PPI & Monitor Size Checker Tool</title>
+    <link rel="canonical" href="https://screendpichecker.com/">
 
-    <title>What Is My Screen DPI? | Screen DPI & PPI Checker</title>
+    <meta property="og:title" content="Screen DPI Calculator — Free PPI & Monitor Size Checker">
+    <meta property="og:description" content="Accurately measure your screen's DPI, PPI, and physical dimensions using credit card calibration. Free tool for designers and developers.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://screendpichecker.com/">
+    <meta property="og:image" content="https://screendpichecker.com/og-image.png">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Screen DPI Calculator — Free PPI & Monitor Size Checker">
+    <meta name="twitter:description" content="Accurately measure your screen's DPI, PPI, and physical dimensions using credit card calibration.">
+    <meta name="twitter:image" content="https://screendpichecker.com/og-image.png">
+
     <link rel="stylesheet" href="styles.css">
-    <link rel="canonical" href="https://screendpi.pages.dev/">
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "WebApplication",
+            "name": "Screen DPI Calculator",
+            "description": "Free online tool to check your screen's DPI, PPI, and physical dimensions with credit card calibration",
+            "url": "https://screendpichecker.com/",
+            "applicationCategory": "UtilityApplication",
+            "operatingSystem": "Any",
+            "offers": {
+                "@type": "Offer",
+                "price": "0",
+                "priceCurrency": "USD"
+            },
+            "featureList": "DPI calculation, PPI measurement, screen size detection, credit card calibration, manual entry"
+        }
+    </script>
+
+    <script type="application/ld+json">
+        {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [{
+                "@type": "Question",
+                "name": "What's a good DPI for design work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "For professional design work, a DPI between 100-163 is ideal. Many designers prefer 27-inch 4K monitors (163 DPI) as they provide excellent clarity while still allowing comfortable viewing distances."
+                }
+            },{
+                "@type": "Question",
+                "name": "Why does my operating system report a different DPI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Operating systems often use logical DPI (usually 96 or 72) for compatibility reasons, not your actual physical DPI. This tool calculates your true physical pixel density based on screen size and resolution."
+                }
+            },{
+                "@type": "Question",
+                "name": "How accurate is the credit card calibration method?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Very accurate when done carefully. Credit cards follow the ISO/IEC 7810 ID-1 standard (85.60 × 53.98 mm). This method can achieve accuracy within 1-2 DPI of your actual screen density."
+                }
+            }]
+        }
+    </script>
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3936307504330527"
-        crossorigin="anonymous"></script>
+            crossorigin="anonymous"></script>
 </head>
-
 <body>
-    <header>
-        <div class="container">
-            <h1>What Is My Screen DPI?</h1>
-            <p class="subtitle">Free tool to check your screen DPI, PPI, and physical size</p>
-        </div>
-    </header>
+<nav class="breadcrumb">
+    <div class="container">
+        <a href="/">Home</a>
+    </div>
+</nav>
 
-    <main class="container">
-        <section class="tool-section">
-            <div class="detected-info">
-                <h2>Your Screen Information</h2>
-                <div class="info-grid">
-                    <div class="info-card">
-                        <span class="label">Screen Resolution</span>
-                        <span class="value" id="resolution">Detecting...</span>
-                    </div>
-                    <div class="info-card">
-                        <span class="label">Device Pixel Ratio</span>
-                        <span class="value" id="pixelRatio">Detecting...</span>
-                    </div>
-                    <div class="info-card">
-                        <span class="label">Browser</span>
-                        <span class="value" id="browser">Detecting...</span>
-                    </div>
-                    <div class="info-card">
-                        <span class="label">Operating System</span>
-                        <span class="value" id="os">Detecting...</span>
-                    </div>
+<header>
+    <div class="container">
+        <h1>Screen DPI & PPI Calculator</h1>
+        <p class="subtitle">Free tool to measure your display's pixel density and physical dimensions with precise credit card calibration</p>
+    </div>
+</header>
+
+<main class="container">
+    <section class="tool-section">
+        <div class="detected-info">
+            <h2>Your Screen Information</h2>
+            <div class="info-grid">
+                <div class="info-card">
+                    <span class="label">Screen Resolution</span>
+                    <span class="value" id="resolution">Detecting...</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Device Pixel Ratio</span>
+                    <span class="value" id="pixelRatio">Detecting...</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Browser</span>
+                    <span class="value" id="browser">Detecting...</span>
+                </div>
+                <div class="info-card">
+                    <span class="label">Operating System</span>
+                    <span class="value" id="os">Detecting...</span>
                 </div>
             </div>
+        </div>
 
-            <div class="calibration-section">
-                <h2>Calibrate for Accurate DPI</h2>
-                <p class="instruction">For the most accurate results, calibrate your screen using a credit card or enter
-                    your monitor's diagonal size.</p>
+        <div class="calibration-section">
+            <h2>Calibrate for Accurate DPI</h2>
+            <p class="instruction">For the most accurate results, calibrate your screen using a credit card or enter your monitor's diagonal size.</p>
 
-                <div class="calibration-method">
-                    <label class="radio-label">
-                        <input type="radio" name="calibration" value="creditcard" checked>
-                        <span>Credit Card Calibration (Recommended)</span>
-                    </label>
-                    <label class="radio-label">
-                        <input type="radio" name="calibration" value="manual">
-                        <span>Manual Entry</span>
-                    </label>
-                </div>
+            <div class="calibration-method">
+                <label class="radio-label">
+                    <input type="radio" name="calibration" value="creditcard" checked>
+                    <span>Credit Card Calibration (Recommended)</span>
+                </label>
+                <label class="radio-label">
+                    <input type="radio" name="calibration" value="manual">
+                    <span>Manual Entry</span>
+                </label>
+            </div>
 
-                <div id="creditCardMethod" class="calibration-option active">
-                    <p class="calibration-instruction">Adjust the slider until the blue rectangle matches the width of a
-                        real credit card on your screen.</p>
-                    <div class="card-container">
-                        <div id="creditCard" class="credit-card">
-                            <div class="card-content">
-                                <div class="card-chip"></div>
-                                <div class="card-text">Standard Credit Card</div>
-                                <div class="card-size">85.6mm × 53.98mm</div>
-                            </div>
+            <div id="creditCardMethod" class="calibration-option active">
+                <p class="calibration-instruction">Adjust the slider until the blue rectangle matches the width of a real credit card on your screen.</p>
+                <div class="card-container">
+                    <div id="creditCard" class="credit-card">
+                        <div class="card-content">
+                            <div class="card-chip"></div>
+                            <div class="card-text">Standard Credit Card</div>
+                            <div class="card-size">85.6mm × 53.98mm</div>
                         </div>
                     </div>
-                    <div class="slider-container">
-                        <label for="cardSlider">Adjust Card Width:</label>
-                        <input type="range" id="cardSlider" min="50" max="500" value="200" step="1">
-                        <span id="cardWidth">200px</span>
-                    </div>
-                    <button id="calibrateBtn" class="btn-primary">Calibrate with This Size</button>
                 </div>
+                <div class="slider-container">
+                    <label for="cardSlider">Adjust Card Width:</label>
+                    <input type="range" id="cardSlider" min="50" max="500" value="200" step="1">
+                    <span id="cardWidth">200px</span>
+                </div>
+                <button id="calibrateBtn" class="btn-primary">Calibrate with This Size</button>
+            </div>
 
-                <div id="manualMethod" class="calibration-option">
-                    <p class="calibration-instruction">Enter your monitor's diagonal size (usually found in product
-                        specifications).</p>
-                    <div class="input-group">
-                        <label for="diagonalInput">Screen Diagonal Size:</label>
-                        <input type="number" id="diagonalInput" min="10" max="100" step="0.1" placeholder="e.g., 27">
-                        <select id="unitSelect">
-                            <option value="inches">inches</option>
-                            <option value="cm">centimeters</option>
-                        </select>
+            <div id="manualMethod" class="calibration-option">
+                <p class="calibration-instruction">Enter your monitor's diagonal size (usually found in product specifications).</p>
+                <div class="input-group">
+                    <label for="diagonalInput">Screen Diagonal Size:</label>
+                    <input type="number" id="diagonalInput" min="10" max="100" step="0.1" placeholder="e.g., 27">
+                    <select id="unitSelect">
+                        <option value="inches">inches</option>
+                        <option value="cm">centimeters</option>
+                    </select>
+                </div>
+                <button id="calculateBtn" class="btn-primary">Calculate DPI</button>
+            </div>
+        </div>
+
+        <div class="results-section" id="resultsSection" style="display: none;">
+            <h2>Your Results</h2>
+            <div class="results-grid">
+                <div class="result-card primary">
+                    <span class="result-label">Screen DPI (PPI)</span>
+                    <span class="result-value" id="dpiValue">—</span>
+                    <span class="result-subtitle" id="densityClass">—</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-label">Physical Width</span>
+                    <span class="result-value" id="physicalWidth">—</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-label">Physical Height</span>
+                    <span class="result-value" id="physicalHeight">—</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-label">Diagonal Size</span>
+                    <span class="result-value" id="diagonalSize">—</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-label">Aspect Ratio</span>
+                    <span class="result-value" id="aspectRatio">—</span>
+                </div>
+                <div class="result-card">
+                    <span class="result-label">Total Pixels</span>
+                    <span class="result-value" id="totalPixels">—</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <aside class="ad-placeholder" aria-label="Advertisement">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-content">
+            <div style="width: 100%; height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                Display Ad Unit (300x250)
+            </div>
+        </div>
+    </aside>
+
+    <article class="content-section educational-content">
+        <h2>Understanding Screen DPI and PPI</h2>
+
+        <h3>What is DPI?</h3>
+        <p>DPI stands for <strong>Dots Per Inch</strong>, a measurement that originated in the printing industry to describe how many ink dots a printer can place within a linear inch. In the context of screens and digital displays, DPI is often used interchangeably with PPI (Pixels Per Inch), though technically PPI is the more accurate term for screen measurements.</p>
+        <p>When we talk about screen DPI, we're measuring pixel density — how many individual pixels are packed into each inch of your display. A higher DPI means smaller, more tightly packed pixels, which generally results in sharper, clearer images and text. For example, a 27-inch 4K monitor has approximately 163 DPI, while an older 24-inch 1080p monitor has about 92 DPI.</p>
+
+        <h3>DPI vs PPI vs Resolution: What's the Difference?</h3>
+        <p><strong>Resolution</strong> refers to the total number of pixels on your screen, expressed as width × height (e.g., 1920×1080 or 3840×2160). This tells you how many pixels exist in total, but it doesn't tell you how densely they're packed.</p>
+        <p><strong>PPI (Pixels Per Inch)</strong> is the technically correct term for screen pixel density. It measures how many pixels fit into one linear inch of your display. PPI is calculated by dividing the diagonal resolution by the diagonal size in inches.</p>
+        <p><strong>DPI (Dots Per Inch)</strong> technically refers to printer resolution, but the terms are often used interchangeably in everyday conversation when discussing screens. For accuracy, use PPI when discussing displays and DPI when discussing printers.</p>
+        <p>The key relationship: Two screens can have the same resolution but vastly different PPI if they're different physical sizes. A 15-inch laptop with 1920×1080 resolution has a much higher PPI (~147) than a 24-inch monitor with the same resolution (~92 PPI).</p>
+
+        <h3>Why Browsers Report Wrong DPI Values</h3>
+        <p>If you've ever checked your screen DPI through JavaScript or system settings, you've likely seen values like 96 DPI on Windows or 72 DPI on older Macs — even though your actual physical pixel density is probably quite different. This happens because of <strong>historical standardization</strong>.</p>
+        <p>Operating systems use a concept called <strong>logical DPI</strong> or <strong>reference DPI</strong>. Windows standardized on 96 DPI in the 1990s, while Mac used 72 DPI (which came from traditional print publishing). These values were chosen as defaults when screens actually had those densities, but modern displays have far surpassed these numbers.</p>
+        <p>Today's operating systems use <strong>scaling factors</strong> instead of reporting true DPI. For example, a Retina display might report 96 logical DPI but use a 2x scaling factor, meaning the physical DPI is actually 192 PPI. This approach maintains compatibility with older software while allowing modern high-resolution displays to show readable text and UI elements.</p>
+        <p>Our calculator measures your <strong>actual physical PPI</strong> by using either credit card calibration (ISO standard size) or manual diagonal measurement, bypassing these legacy software conventions to give you the true pixel density of your display.</p>
+
+        <h3>How to Calculate Your Real Screen Size</h3>
+        <p>Calculating your screen's true physical dimensions requires knowing both your resolution and your pixel density. Here's the math:</p>
+        <ol>
+            <li><strong>Measure diagonal size:</strong> Use a ruler to measure corner-to-corner of the visible screen (excluding bezels)</li>
+            <li><strong>Calculate diagonal pixels:</strong> √(width² + height²) — for a 1920×1080 screen, that's √(1920² + 1080²) = 2203 pixels</li>
+            <li><strong>Calculate PPI:</strong> Diagonal pixels ÷ diagonal inches — for a 24-inch screen, that's 2203 ÷ 24 = 91.8 PPI</li>
+            <li><strong>Calculate physical width:</strong> Resolution width ÷ PPI — 1920 ÷ 91.8 = 20.9 inches</li>
+            <li><strong>Calculate physical height:</strong> Resolution height ÷ PPI — 1080 ÷ 91.8 = 11.8 inches</li>
+        </ol>
+        <p>Our tool automates this entire process. With credit card calibration, you don't even need to know your screen's diagonal size — the tool calculates your PPI by comparing the on-screen card to the ISO standard credit card dimensions (85.6mm × 53.98mm).</p>
+
+        <h3>The Legacy of 96 DPI: Why This Number Persists</h3>
+        <p>The 96 DPI standard is deeply embedded in web and desktop computing, and understanding its history helps explain many quirks in modern web development and design.</p>
+        <p>In the early 1990s, Windows 3.1 chose 96 DPI as its default screen resolution assumption. This was based on typical CRT monitors of that era, which genuinely had pixel densities around 96 PPI. At the same time, Macintosh systems used 72 DPI, matching the PostScript point system used in printing (where 1 inch = 72 points).</p>
+        <p>These defaults meant that 1 CSS pixel would equal 1 physical screen pixel, and a 12-point font would measure exactly 12/72 inches (1/6 inch) on screen. This made WYSIWYG (What You See Is What You Get) design theoretically possible.</p>
+        <p>Today, 96 DPI persists in:</p>
+        <ul>
+            <li><strong>CSS specifications:</strong> 1 CSS inch is defined as 96 CSS pixels, regardless of your screen's actual DPI</li>
+            <li><strong>Windows display settings:</strong> 100% scaling still refers to "96 DPI" even on high-resolution displays</li>
+            <li><strong>Image editing software:</strong> Default "screen resolution" presets often default to 72 or 96 PPI</li>
+            <li><strong>Browser APIs:</strong> JavaScript's screen measurement APIs report logical pixels, not physical ones</li>
+        </ul>
+
+        <h3>When DPI Matters: Design and Print Applications</h3>
+        <p>Understanding your screen's true DPI is crucial in several professional scenarios:</p>
+        <p><strong>Graphic Design & Photo Editing:</strong> If you're designing for print at 300 DPI, viewing your work on a 100 PPI monitor means printed output will be 3x smaller than it appears on screen. Knowing your screen's PPI helps you mentally adjust or set proper preview sizes.</p>
+        <p><strong>UI/UX Design:</strong> When designing mobile interfaces on a desktop monitor, DPI awareness helps you preview at accurate physical sizes. An iPhone UI element that's 44×44 points should physically measure about 7-8mm regardless of screen — critical for thumb-friendly touch targets.</p>
+        <p><strong>CAD and Technical Drawing:</strong> Architects and engineers often need to view drawings at real-world scale. A 100 PPI monitor can't display measurements as accurately as a 200 PPI display when zoomed to actual size.</p>
+        <p><strong>Medical Imaging:</strong> Radiologists use specialized high-DPI monitors (often 300+ PPI) to view X-rays and scans with diagnostic accuracy. Standard monitors would miss fine details.</p>
+        <p><strong>Color-Critical Work:</strong> High-PPI displays can show smoother color gradients and reduce visible dithering in subtle tonal transitions, important for professional color grading.</p>
+
+        <h3>When DPI Does NOT Matter: Web Development</h3>
+        <p>For most web development and general computing, your screen's actual DPI is largely irrelevant, thanks to modern web standards and responsive design:</p>
+        <p><strong>CSS Pixel Independence:</strong> Browsers use CSS pixels (logical units) that automatically scale based on the device pixel ratio. A 300px wide div will take up the same visual percentage of screen space whether your monitor is 96 or 220 PPI.</p>
+        <p><strong>Responsive Design:</strong> Modern web layouts use relative units (%, em, rem, vw, vh) that adapt to viewport size, not physical dimensions. Your layout responds to available pixels, not inches.</p>
+        <p><strong>Vector Graphics:</strong> SVG images and icon fonts scale perfectly regardless of screen DPI, rendering at the optimal resolution for each display.</p>
+        <p><strong>Device Pixel Ratio Handling:</strong> High-DPI displays automatically request higher resolution images through srcset and responsive image techniques, handled by the browser without developer DPI awareness.</p>
+        <p>The one exception: If you're building web-based design tools, CAD applications, or anything requiring physical measurements, you'll need to account for actual DPI — which is exactly what tools like this calculator help with.</p>
+
+        <h3>Common Screen DPI Values by Device Type</h3>
+        <table class="dpi-reference-table">
+            <thead>
+            <tr>
+                <th>Device Type</th>
+                <th>Typical Resolution</th>
+                <th>Screen Size</th>
+                <th>DPI/PPI</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td>Budget Desktop Monitor</td>
+                <td>1920 × 1080</td>
+                <td>24"</td>
+                <td>~92 PPI</td>
+            </tr>
+            <tr>
+                <td>Standard Desktop Monitor</td>
+                <td>2560 × 1440</td>
+                <td>27"</td>
+                <td>~109 PPI</td>
+            </tr>
+            <tr>
+                <td>4K Desktop Monitor</td>
+                <td>3840 × 2160</td>
+                <td>27"</td>
+                <td>~163 PPI</td>
+            </tr>
+            <tr>
+                <td>MacBook Pro 16"</td>
+                <td>3456 × 2234</td>
+                <td>16"</td>
+                <td>~254 PPI</td>
+            </tr>
+            <tr>
+                <td>Standard Laptop</td>
+                <td>1920 × 1080</td>
+                <td>15.6"</td>
+                <td>~141 PPI</td>
+            </tr>
+            <tr>
+                <td>iPhone 15 Pro</td>
+                <td>2556 × 1179</td>
+                <td>6.1"</td>
+                <td>~460 PPI</td>
+            </tr>
+            <tr>
+                <td>iPad Air</td>
+                <td>2360 × 1640</td>
+                <td>10.9"</td>
+                <td>~264 PPI</td>
+            </tr>
+            </tbody>
+        </table>
+
+        <div class="internal-links">
+            <h3>Learn More</h3>
+            <ul>
+                <li><a href="/guides/72-vs-96-dpi.html">72 DPI vs 96 DPI: Historical Standards Explained</a></li>
+                <li><a href="/guides/what-is-retina-display.html">What is a Retina Display? Apple's PPI Standard</a></li>
+                <li><a href="/guides/ppi-calculator-explained.html">How PPI Calculators Work: The Math Behind Screen Density</a></li>
+                <li><a href="/guides/does-dpi-matter-for-web.html">Does DPI Matter for Web Design?</a></li>
+                <li><a href="/guides/">Browse All Guides →</a></li>
+            </ul>
+        </div>
+    </article>
+
+    <section class="content-section">
+        <h2>How to Use This Tool</h2>
+        <ol class="usage-steps">
+            <li><strong>Automatic Detection:</strong> Your screen resolution and device information are detected automatically when you load this page.</li>
+            <li><strong>Choose Calibration Method:</strong> Select either credit card calibration (most accurate) or manual entry if you know your monitor's size.</li>
+            <li><strong>Calibrate:</strong> If using credit card method, adjust the slider until the blue rectangle matches your physical credit card width. If using manual entry, input your screen's diagonal measurement.</li>
+            <li><strong>View Results:</strong> Click the button to calculate your screen's DPI, physical dimensions, and other specifications.</li>
+        </ol>
+    </section>
+
+    <section class="content-section">
+        <h2>Why Screen DPI Matters</h2>
+        <div class="importance-grid">
+            <div class="importance-card">
+                <h3>For Designers</h3>
+                <p>Understanding your screen's DPI helps you create pixel-perfect mockups and accurately preview how designs will look on different devices. A 27-inch 4K monitor has very different pixel density than a laptop screen.</p>
+            </div>
+            <div class="importance-card">
+                <h3>For Developers</h3>
+                <p>Knowing your display's DPI is crucial for responsive design testing, understanding device pixel ratio, and ensuring images and UI elements scale correctly across different screen densities.</p>
+            </div>
+            <div class="importance-card">
+                <h3>For Print Professionals</h3>
+                <p>Screen DPI differs significantly from print DPI (typically 300). Understanding your monitor's pixel density helps you better judge how digital assets will translate to physical prints.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section">
+        <h2>Understanding Your Results</h2>
+        <h3>What is DPI vs. PPI?</h3>
+        <p><strong>DPI (Dots Per Inch)</strong> and <strong>PPI (Pixels Per Inch)</strong> are often used interchangeably for screens, though technically DPI refers to print resolution. For digital displays, PPI is the accurate term, measuring how many pixels fit into one linear inch of screen space.</p>
+
+        <h3>Pixel Density Classifications</h3>
+        <div class="density-table">
+            <table>
+                <thead>
+                <tr>
+                    <th>DPI Range</th>
+                    <th>Classification</th>
+                    <th>Typical Devices</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                    <td>Below 100</td>
+                    <td>Low Density</td>
+                    <td>Older desktop monitors, budget displays</td>
+                </tr>
+                <tr>
+                    <td>100-150</td>
+                    <td>Standard Desktop</td>
+                    <td>Most 1080p and 1440p monitors</td>
+                </tr>
+                <tr>
+                    <td>150-220</td>
+                    <td>High Density</td>
+                    <td>4K monitors, high-end laptops</td>
+                </tr>
+                <tr>
+                    <td>220+</td>
+                    <td>Retina/HiDPI</td>
+                    <td>MacBook Pro, 4K laptops, mobile devices</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Common Screen Sizes and DPI</h3>
+        <div class="common-screens">
+            <ul>
+                <li><strong>24" 1080p Monitor:</strong> ~92 DPI (Standard Desktop)</li>
+                <li><strong>27" 1440p Monitor:</strong> ~109 DPI (Standard Desktop)</li>
+                <li><strong>27" 4K Monitor:</strong> ~163 DPI (High Density)</li>
+                <li><strong>15" MacBook Pro:</strong> ~220 DPI (Retina Display)</li>
+                <li><strong>13" Laptop (1080p):</strong> ~170 DPI (High Density)</li>
+                <li><strong>32" 4K Monitor:</strong> ~138 DPI (High Density)</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="content-section faq-section" itemscope itemtype="https://schema.org/FAQPage">
+        <h2>Frequently Asked Questions</h2>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">What's a good DPI for design work?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">For professional design work, a DPI between 100-163 is ideal. Many designers prefer 27-inch 4K monitors (163 DPI) as they provide excellent clarity while still allowing comfortable viewing distances. Ultra-high DPI displays (220+) can sometimes make UI elements too small without scaling.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Why does my operating system report a different DPI?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Operating systems often use logical DPI (usually 96 or 72) for compatibility reasons, not your actual physical DPI. Windows and macOS apply scaling factors to make content readable. This tool calculates your true physical pixel density based on screen size and resolution.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Does higher DPI always mean better quality?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Not necessarily. While higher DPI provides sharper images, it also requires more GPU power and can make UI elements tiny without scaling. For desktop work, 109-163 DPI is often the sweet spot. Beyond 220 DPI, you'll likely need OS scaling, which can cause compatibility issues with some applications.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How do I measure my screen manually?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Use a ruler or measuring tape to measure the diagonal distance of your screen's visible display area (corner to corner), excluding the bezel. Most manufacturers list this measurement in product specifications. For accuracy, measure in centimeters and convert to inches (divide by 2.54).</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">What is device pixel ratio?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Device pixel ratio (DPR) is the ratio between physical pixels and logical pixels. A DPR of 2 means the device uses 2x2 (4) physical pixels to display one logical pixel. Retina displays typically have DPR of 2 or higher, making images and text appear smoother.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Can I use this tool on mobile devices?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Yes, this tool works on smartphones and tablets. However, the credit card calibration method works best on desktop monitors. For mobile devices, you can use manual entry if you know your device's screen size from manufacturer specifications.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Why is my screen's DPI different from 96 or 72?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">The values 96 DPI (Windows) and 72 DPI (older Mac) are legacy reference values, not actual physical measurements. Modern displays have widely varying pixel densities. A 4K monitor has much higher DPI than a 1080p monitor of the same physical size.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">How accurate is the credit card calibration method?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Very accurate when done carefully. Credit cards follow the ISO/IEC 7810 ID-1 standard (85.60 × 53.98 mm). As long as you precisely match the on-screen rectangle to your physical card, this method can achieve accuracy within 1-2 DPI of your actual screen density.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">What if my browser zoom is not at 100%?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">Browser zoom will affect the calibration accuracy. For best results, ensure your browser zoom is set to 100% (press Ctrl+0 or Cmd+0). This tool attempts to account for zoom levels, but manual calibration works best at default zoom.</p>
+            </div>
+        </div>
+
+        <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+            <h3 itemprop="name">Do I need to calibrate every time I visit?</h3>
+            <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
+                <p itemprop="text">No, once you know your screen's DPI, it remains constant unless you change monitors or resolution. You can bookmark your results or make a note of your DPI value. The physical properties of your display don't change between visits.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="content-section recommendations-section">
+        <h2>Recommended Monitors for Design & Development</h2>
+        <p class="recommendations-intro">For accurate color work and comfortable long-term use, these monitors are trusted by professionals:</p>
+
+        <div class="product-grid">
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="placeholder-image">27" 4K Monitor</div>
+                </div>
+                <div class="product-info">
+                    <h3>Dell UltraSharp 27" 4K (U2723DE)</h3>
+                    <div class="product-rating">★★★★★ 4.7/5</div>
+                    <div class="product-specs">
+                        <strong>DPI:</strong> 163 PPI<br>
+                        <strong>Resolution:</strong> 3840 × 2160<br>
+                        <strong>Color:</strong> 99% sRGB, 95% DCI-P3
                     </div>
-                    <button id="calculateBtn" class="btn-primary">Calculate DPI</button>
+                    <p class="product-description">Excellent for UI design and development. Built-in USB-C hub, height-adjustable stand, and factory color calibration make this a top choice for professionals.</p>
+                    <a href="#" class="product-link" rel="nofollow noopener" target="_blank">Check Price on Amazon →</a>
                 </div>
             </div>
 
-            <div class="results-section" id="resultsSection" style="display: none;">
-                <h2>Your Results</h2>
-                <div class="results-grid">
-                    <div class="result-card primary">
-                        <span class="result-label">Screen DPI (PPI)</span>
-                        <span class="result-value" id="dpiValue">—</span>
-                        <span class="result-subtitle" id="densityClass">—</span>
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="placeholder-image">27" 5K Monitor</div>
+                </div>
+                <div class="product-info">
+                    <h3>LG UltraFine 27" 5K Display</h3>
+                    <div class="product-rating">★★★★☆ 4.5/5</div>
+                    <div class="product-specs">
+                        <strong>DPI:</strong> 218 PPI<br>
+                        <strong>Resolution:</strong> 5120 × 2880<br>
+                        <strong>Color:</strong> P3 Wide Color Gamut
                     </div>
-                    <div class="result-card">
-                        <span class="result-label">Physical Width</span>
-                        <span class="result-value" id="physicalWidth">—</span>
-                    </div>
-                    <div class="result-card">
-                        <span class="result-label">Physical Height</span>
-                        <span class="result-value" id="physicalHeight">—</span>
-                    </div>
-                    <div class="result-card">
-                        <span class="result-label">Diagonal Size</span>
-                        <span class="result-value" id="diagonalSize">—</span>
-                    </div>
-                    <div class="result-card">
-                        <span class="result-label">Aspect Ratio</span>
-                        <span class="result-value" id="aspectRatio">—</span>
-                    </div>
-                    <div class="result-card">
-                        <span class="result-label">Total Pixels</span>
-                        <span class="result-value" id="totalPixels">—</span>
-                    </div>
+                    <p class="product-description">Retina-level pixel density for razor-sharp text and graphics. Ideal for graphic designers and photographers who need exceptional detail and color accuracy.</p>
+                    <a href="#" class="product-link" rel="nofollow noopener" target="_blank">Check Price on Amazon →</a>
                 </div>
             </div>
-        </section>
 
-        <aside class="ad-placeholder" aria-label="Advertisement">
-            <div class="ad-label">Advertisement</div>
-            <div class="ad-content">
-                <div
-                    style="width: 100%; height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
-                    Display Ad Unit (300x250)
+            <div class="product-card">
+                <div class="product-image">
+                    <div class="placeholder-image">32" 4K Monitor</div>
+                </div>
+                <div class="product-info">
+                    <h3>BenQ 32" 4K Designer Monitor (PD3220U)</h3>
+                    <div class="product-rating">★★★★★ 4.8/5</div>
+                    <div class="product-specs">
+                        <strong>DPI:</strong> 140 PPI<br>
+                        <strong>Resolution:</strong> 3840 × 2160<br>
+                        <strong>Color:</strong> 100% sRGB, Rec.709
+                    </div>
+                    <p class="product-description">Larger screen with comfortable pixel density. AQCOLOR technology ensures consistent color accuracy, perfect for CAD/CAM and creative professionals needing screen real estate.</p>
+                    <a href="#" class="product-link" rel="nofollow noopener" target="_blank">Check Price on Amazon →</a>
                 </div>
             </div>
-        </aside>
+        </div>
 
-        <section class="content-section">
-            <h2>How to Use This Tool</h2>
-            <ol class="usage-steps">
-                <li><strong>Automatic Detection:</strong> Your screen resolution and device information are detected
-                    automatically when you load this page.</li>
-                <li><strong>Choose Calibration Method:</strong> Select either credit card calibration (most accurate) or
-                    manual entry if you know your monitor's size.</li>
-                <li><strong>Calibrate:</strong> If using credit card method, adjust the slider until the blue rectangle
-                    matches your physical credit card width. If using manual entry, input your screen's diagonal
-                    measurement.</li>
-                <li><strong>View Results:</strong> Click the button to calculate your screen's DPI, physical dimensions,
-                    and other specifications.</li>
-            </ol>
-        </section>
+        <p class="affiliate-disclaimer"><strong>Affiliate Disclaimer:</strong> We may earn a commission from qualifying purchases made through links on this page at no additional cost to you. We only recommend products we believe will be valuable to our users. This helps support the maintenance of this free tool.</p>
+    </section>
 
-        <section class="content-section">
-            <h2>Why Screen DPI Matters</h2>
-            <div class="importance-grid">
-                <div class="importance-card">
-                    <h3>For Designers</h3>
-                    <p>Understanding your screen's DPI helps you create pixel-perfect mockups and accurately preview how
-                        designs will look on different devices. A 27-inch 4K monitor has very different pixel density
-                        than a laptop screen.</p>
-                </div>
-                <div class="importance-card">
-                    <h3>For Developers</h3>
-                    <p>Knowing your display's DPI is crucial for responsive design testing, understanding device pixel
-                        ratio, and ensuring images and UI elements scale correctly across different screen densities.
-                    </p>
-                </div>
-                <div class="importance-card">
-                    <h3>For Print Professionals</h3>
-                    <p>Screen DPI differs significantly from print DPI (typically 300). Understanding your monitor's
-                        pixel density helps you better judge how digital assets will translate to physical prints.</p>
-                </div>
+    <aside class="ad-placeholder" aria-label="Advertisement">
+        <div class="ad-label">Advertisement</div>
+        <div class="ad-content">
+            <div style="width: 100%; height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
+                Display Ad Unit (728x90 or Responsive)
             </div>
-        </section>
+        </div>
+    </aside>
+</main>
 
-        <section class="content-section">
-            <h2>Understanding Your Results</h2>
-            <h3>What is DPI vs. PPI?</h3>
-            <p><strong>DPI (Dots Per Inch)</strong> and <strong>PPI (Pixels Per Inch)</strong> are often used
-                interchangeably for screens, though technically DPI refers to print resolution. For digital displays,
-                PPI is the accurate term, measuring how many pixels fit into one linear inch of screen space.</p>
-
-            <h3>Pixel Density Classifications</h3>
-            <div class="density-table">
-                <table>
-                    <thead>
-                        <tr>
-                            <th>DPI Range</th>
-                            <th>Classification</th>
-                            <th>Typical Devices</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Below 100</td>
-                            <td>Low Density</td>
-                            <td>Older desktop monitors, budget displays</td>
-                        </tr>
-                        <tr>
-                            <td>100-150</td>
-                            <td>Standard Desktop</td>
-                            <td>Most 1080p and 1440p monitors</td>
-                        </tr>
-                        <tr>
-                            <td>150-220</td>
-                            <td>High Density</td>
-                            <td>4K monitors, high-end laptops</td>
-                        </tr>
-                        <tr>
-                            <td>220+</td>
-                            <td>Retina/HiDPI</td>
-                            <td>MacBook Pro, 4K laptops, mobile devices</td>
-                        </tr>
-                    </tbody>
-                </table>
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>About This Tool</h4>
+                <p>Screen DPI & Physical Size Checker is a free utility for designers, developers, and digital professionals. All calculations are performed locally in your browser.</p>
+                <p class="contact-email">Contact: <a href="mailto:support@screendpichecker.com">support@screendpichecker.com</a></p>
             </div>
-
-            <h3>Common Screen Sizes and DPI</h3>
-            <div class="common-screens">
-                <ul>
-                    <li><strong>24" 1080p Monitor:</strong> ~92 DPI (Standard Desktop)</li>
-                    <li><strong>27" 1440p Monitor:</strong> ~109 DPI (Standard Desktop)</li>
-                    <li><strong>27" 4K Monitor:</strong> ~163 DPI (High Density)</li>
-                    <li><strong>15" MacBook Pro:</strong> ~220 DPI (Retina Display)</li>
-                    <li><strong>13" Laptop (1080p):</strong> ~170 DPI (High Density)</li>
-                    <li><strong>32" 4K Monitor:</strong> ~138 DPI (High Density)</li>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul class="footer-links">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/guides/">Guides</a></li>
+                    <li><a href="/about.html">About</a></li>
+                    <li><a href="/privacy.html">Privacy Policy</a></li>
+                    <li><a href="/contact.html">Contact</a></li>
                 </ul>
             </div>
-        </section>
-
-        <section class="content-section faq-section" itemscope itemtype="https://schema.org/FAQPage">
-            <h2>Frequently Asked Questions</h2>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What's a good DPI for design work?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">For professional design work, a DPI between 100-163 is ideal. Many designers
-                        prefer 27-inch 4K monitors (163 DPI) as they provide excellent clarity while still allowing
-                        comfortable viewing distances. Ultra-high DPI displays (220+) can sometimes make UI elements too
-                        small without scaling.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Why does my operating system report a different DPI?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Operating systems often use logical DPI (usually 96 or 72) for compatibility
-                        reasons, not your actual physical DPI. Windows and macOS apply scaling factors to make content
-                        readable. This tool calculates your true physical pixel density based on screen size and
-                        resolution.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Does higher DPI always mean better quality?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Not necessarily. While higher DPI provides sharper images, it also requires more
-                        GPU power and can make UI elements tiny without scaling. For desktop work, 109-163 DPI is often
-                        the sweet spot. Beyond 220 DPI, you'll likely need OS scaling, which can cause compatibility
-                        issues with some applications.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How do I measure my screen manually?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Use a ruler or measuring tape to measure the diagonal distance of your screen's
-                        visible display area (corner to corner), excluding the bezel. Most manufacturers list this
-                        measurement in product specifications. For accuracy, measure in centimeters and convert to
-                        inches (divide by 2.54).</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What is device pixel ratio?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Device pixel ratio (DPR) is the ratio between physical pixels and logical pixels.
-                        A DPR of 2 means the device uses 2x2 (4) physical pixels to display one logical pixel. Retina
-                        displays typically have DPR of 2 or higher, making images and text appear smoother.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Can I use this tool on mobile devices?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Yes, this tool works on smartphones and tablets. However, the credit card
-                        calibration method works best on desktop monitors. For mobile devices, you can use manual entry
-                        if you know your device's screen size from manufacturer specifications.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Why is my screen's DPI different from 96 or 72?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">The values 96 DPI (Windows) and 72 DPI (older Mac) are legacy reference values,
-                        not actual physical measurements. Modern displays have widely varying pixel densities. A 4K
-                        monitor has much higher DPI than a 1080p monitor of the same physical size.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">How accurate is the credit card calibration method?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Very accurate when done carefully. Credit cards follow the ISO/IEC 7810 ID-1
-                        standard (85.60 × 53.98 mm). As long as you precisely match the on-screen rectangle to your
-                        physical card, this method can achieve accuracy within 1-2 DPI of your actual screen density.
-                    </p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">What if my browser zoom is not at 100%?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">Browser zoom will affect the calibration accuracy. For best results, ensure your
-                        browser zoom is set to 100% (press Ctrl+0 or Cmd+0). This tool attempts to account for zoom
-                        levels, but manual calibration works best at default zoom.</p>
-                </div>
-            </div>
-
-            <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-                <h3 itemprop="name">Do I need to calibrate every time I visit?</h3>
-                <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-                    <p itemprop="text">No, once you know your screen's DPI, it remains constant unless you change
-                        monitors or resolution. You can bookmark your results or make a note of your DPI value. The
-                        physical properties of your display don't change between visits.</p>
-                </div>
-            </div>
-        </section>
-
-        <section class="content-section recommendations-section">
-            <h2>Recommended Monitors for Design & Development</h2>
-            <p class="recommendations-intro">For accurate color work and comfortable long-term use, these monitors are
-                trusted by professionals:</p>
-
-            <div class="product-grid">
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="placeholder-image">27" 4K Monitor</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>Dell UltraSharp 27" 4K (U2723DE)</h3>
-                        <div class="product-rating">★★★★★ 4.7/5</div>
-                        <div class="product-specs">
-                            <strong>DPI:</strong> 163 PPI<br>
-                            <strong>Resolution:</strong> 3840 × 2160<br>
-                            <strong>Color:</strong> 99% sRGB, 95% DCI-P3
-                        </div>
-                        <p class="product-description">Excellent for UI design and development. Built-in USB-C hub,
-                            height-adjustable stand, and factory color calibration make this a top choice for
-                            professionals.</p>
-                        <a href="#" class="product-link" rel="nofollow noopener" target="_blank">Check Price on Amazon
-                            →</a>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="placeholder-image">27" 5K Monitor</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>LG UltraFine 27" 5K Display</h3>
-                        <div class="product-rating">★★★★☆ 4.5/5</div>
-                        <div class="product-specs">
-                            <strong>DPI:</strong> 218 PPI<br>
-                            <strong>Resolution:</strong> 5120 × 2880<br>
-                            <strong>Color:</strong> P3 Wide Color Gamut
-                        </div>
-                        <p class="product-description">Retina-level pixel density for razor-sharp text and graphics.
-                            Ideal for graphic designers and photographers who need exceptional detail and color
-                            accuracy.</p>
-                        <a href="#" class="product-link" rel="nofollow noopener" target="_blank">Check Price on Amazon
-                            →</a>
-                    </div>
-                </div>
-
-                <div class="product-card">
-                    <div class="product-image">
-                        <div class="placeholder-image">32" 4K Monitor</div>
-                    </div>
-                    <div class="product-info">
-                        <h3>BenQ 32" 4K Designer Monitor (PD3220U)</h3>
-                        <div class="product-rating">★★★★★ 4.8/5</div>
-                        <div class="product-specs">
-                            <strong>DPI:</strong> 140 PPI<br>
-                            <strong>Resolution:</strong> 3840 × 2160<br>
-                            <strong>Color:</strong> 100% sRGB, Rec.709
-                        </div>
-                        <p class="product-description">Larger screen with comfortable pixel density. AQCOLOR technology
-                            ensures consistent color accuracy, perfect for CAD/CAM and creative professionals needing
-                            screen real estate.</p>
-                        <a href="#" class="product-link" rel="nofollow noopener" target="_blank">Check Price on Amazon
-                            →</a>
-                    </div>
-                </div>
-            </div>
-
-            <p class="affiliate-disclaimer"><strong>Affiliate Disclaimer:</strong> We may earn a commission from
-                qualifying purchases made through links on this page at no additional cost to you. We only recommend
-                products we believe will be valuable to our users. This helps support the maintenance of this free tool.
-            </p>
-        </section>
-
-        <aside class="ad-placeholder" aria-label="Advertisement">
-            <div class="ad-label">Advertisement</div>
-            <div class="ad-content">
-                <div
-                    style="width: 100%; height: 250px; background: #f5f5f5; display: flex; align-items: center; justify-content: center; color: #999;">
-                    Display Ad Unit (728x90 or Responsive)
-                </div>
-            </div>
-        </aside>
-    </main>
-
-    <footer>
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>About This Tool</h4>
-                    <p>Screen DPI & Physical Size Checker is a free utility for designers, developers, and digital
-                        professionals. All calculations are performed locally in your browser.</p>
-                    <p class="contact-email">Contact: <a
-                            href="mailto:support@screendpichecker.com">support@screendpichecker.com</a></p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="/">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="privacy.html">Privacy Policy</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Information</h4>
-                    <p>This tool does not collect, store, or transmit any personal information. All measurements are
-                        calculated entirely in your browser and never sent to any server.</p>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2026 Screen DPI Checker. All rights reserved.</p>
+            <div class="footer-section">
+                <h4>Information</h4>
+                <p>This tool does not collect, store, or transmit any personal information. All measurements are calculated entirely in your browser and never sent to any server.</p>
             </div>
         </div>
-    </footer>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Screen DPI Checker. All rights reserved.</p>
+        </div>
+    </div>
+</footer>
 
-    <script src="script.js"></script>
+<script src="script.js"></script>
 </body>
-
 </html>

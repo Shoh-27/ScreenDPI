@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn how PPI calculators work. Understand the mathematics, formulas, and methods used to calculate screen pixel density and physical dimensions.">
+  <title>How PPI Calculators Work: The Math Behind Screen Density Measurement</title>
+  <link rel="canonical" href="https://screendpichecker.com/guides/ppi-calculator-explained.html">
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+<nav class="breadcrumb">
+  <div class="container">
+    <a href="/">Home</a> / <a href="/guides/">Guides</a> / PPI Calculator Explained
+  </div>
+</nav>
+<header>
+  <div class="container">
+    <h1>How PPI Calculators Work</h1>
+    <p class="subtitle">The mathematics and methods behind screen pixel density calculation</p>
+  </div>
+</header>
+<main class="container">
+  <article class="content-section guide-article">
+    <h2>Introduction to PPI Calculation</h2>
+    <p>PPI (Pixels Per Inch) calculators determine how many pixels fit into one linear inch of your screen. This measurement is crucial for understanding display quality, but calculating it requires knowing both your screen's resolution and physical size.</p>
+
+    <h2>The Basic Formula</h2>
+    <p>The fundamental PPI calculation uses the Pythagorean theorem:</p>
+    <p><strong>PPI = √(width² + height²) / diagonal size in inches</strong></p>
+    <p>Where:</p>
+    <ul>
+      <li><strong>width:</strong> Screen resolution width in pixels</li>
+      <li><strong>height:</strong> Screen resolution height in pixels</li>
+      <li><strong>diagonal:</strong> Screen diagonal measurement in inches</li>
+    </ul>
+
+    <h3>Example Calculation</h3>
+    <p>For a 27-inch monitor with 2560×1440 resolution:</p>
+    <ol>
+      <li>Calculate diagonal pixels: √(2560² + 1440²) = √(6,553,600 + 2,073,600) = √8,627,200 = 2937.3 pixels</li>
+      <li>Divide by diagonal inches: 2937.3 ÷ 27 = 108.8 PPI</li>
+    </ol>
+
+    <h2>Method 1: Manual Measurement</h2>
+    <p>The traditional approach requires measuring your screen's diagonal with a ruler:</p>
+    <ol>
+      <li>Place ruler at one corner of visible screen area</li>
+      <li>Measure to opposite corner (excluding bezel)</li>
+      <li>Convert to inches if measured in centimeters (cm ÷ 2.54)</li>
+      <li>Apply formula above</li>
+    </ol>
+    <p><strong>Accuracy:</strong> ±0.5 inches depending on measurement precision</p>
+
+    <h2>Method 2: Credit Card Calibration</h2>
+    <p>Our calculator uses ISO standard credit card dimensions (85.6mm × 53.98mm) as a reference:</p>
+    <ol>
+      <li>Display on-screen rectangle</li>
+      <li>User adjusts to match physical card width</li>
+      <li>Calculate: PPI = pixels_width / 3.37 inches</li>
+      <li>Verify with card height if needed</li>
+    </ol>
+    <p><strong>Accuracy:</strong> ±1-2 PPI when done carefully</p>
+    <p>Why this works: Credit cards worldwide follow ISO/IEC 7810 ID-1 standard, making them perfect calibration tools.</p>
+
+    <h2>Calculating Physical Dimensions</h2>
+    <p>Once PPI is known, calculate physical screen size:</p>
+    <p><strong>Physical Width (inches) = Pixel Width / PPI</strong><br>
+      <strong>Physical Height (inches) = Pixel Height / PPI</strong></p>
+    <p>Example with 109 PPI and 2560×1440:</p>
+    <ul>
+      <li>Width: 2560 / 109 = 23.5 inches</li>
+      <li>Height: 1440 / 109 = 13.2 inches</li>
+      <li>Diagonal: √(23.5² + 13.2²) = 27 inches ✓</li>
+    </ul>
+
+    <h2>Device Pixel Ratio Considerations</h2>
+    <p>Modern displays use <strong>device pixel ratio (DPR)</strong> which multiplies logical pixels:</p>
+    <p>Standard display: 1920×1080 @ 1x DPR = 1920×1080 physical pixels<br>
+      Retina display: 1920×1080 @ 2x DPR = 3840×2160 physical pixels</p>
+    <p>Calculators must multiply by DPR to get true physical resolution:</p>
+    <p><code>physical_width = logical_width × device_pixel_ratio</code></p>
+
+    <h2>Common Pitfalls</h2>
+    <h3>Using Manufacturer Specs</h3>
+    <p>Monitor specs often round. A "27-inch" monitor might be 27.2" or 26.9" actual diagonal.</p>
+    <h3>Including the Bezel</h3>
+    <p>Measure only visible display area, not the entire monitor frame.</p>
+    <h3>Browser Zoom</h3>
+    <p>Credit card calibration fails if browser isn't at 100% zoom. Always reset zoom first.</p>
+
+    <h2>Alternative Methods</h2>
+    <h3>DPI from Known Model</h3>
+    <p>Look up your exact monitor model specifications online. Manufacturers list native resolution and panel size.</p>
+    <h3>Operating System Reporting</h3>
+    <p>OS-reported DPI is usually logical (96/72), not physical. Unreliable for accurate measurement.</p>
+    <h3>Online Databases</h3>
+    <p>Sites like DisplaySpecifications catalog screen specs for common devices.</p>
+
+    <h2>Try It Yourself</h2>
+    <p>Ready to calculate your screen's PPI? Use our <a href="/">Screen DPI Calculator</a> with credit card calibration for the most accurate results without needing a ruler.</p>
+
+    <div class="internal-links">
+      <h3>Related Guides</h3>
+      <ul>
+        <li><a href="/guides/how-to-measure-monitor-size.html">How to Measure Monitor Size</a></li>
+        <li><a href="/guides/72-vs-96-dpi.html">72 vs 96 DPI Explained</a></li>
+        <li><a href="/guides/what-is-retina-display.html">What is Retina Display</a></li>
+        <li><a href="/">DPI Calculator Tool</a></li>
+      </ul>
+    </div>
+  </article>
+</main>
+<footer>
+  <div class="container">
+    <div class="footer-content">
+      <div class="footer-section">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="/">Home</a></li>
+          <li><a href="/guides/">Guides</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 Screen DPI Checker. All rights reserved.</p>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
